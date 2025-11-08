@@ -28,6 +28,7 @@ function arrayOfItems(n) {
 }
 
 console.log(arrayOfItems(6));
+
 /*
 Solution
 --------
