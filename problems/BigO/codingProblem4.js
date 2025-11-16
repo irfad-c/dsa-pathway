@@ -1,8 +1,7 @@
 /*
 Question
 --------
-Add any 2 numbers in the array to get given sum
-
+Add  2 different numbers in the array to get given sum
 */
 
 ///////////////////////////////////////////////////////////////////////
@@ -27,7 +26,6 @@ hasPairWithSum([1,2,3,4],8)
 //Better
 
 function hasPairWithSum2(arr, sum) {
-
   const mySet = new Set();
   const len = arr.length;
   for (let i = 0; i < len; i++) {
