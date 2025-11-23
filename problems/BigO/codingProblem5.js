@@ -15,6 +15,7 @@ const hasPairWithSum = (arr, sum) => {
       if (arr[i] + arr[j] == sum) {
         console.log("Match found", arr[i], arr[j]);
       }
+      
   }
   return false;
 };
