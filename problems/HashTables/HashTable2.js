@@ -1,8 +1,9 @@
 //Given an array=[2,5,1,2,3,5,1,2,4]
 //It should return 2
 
-//Here time complexity is O(n);
-//Space complexity is O(1)
+/* Here time complexity is O(n);
+Space complexity is O(1)
+It will not give correct output.It returns the number with the earliest first appearance that has any duplicate later.*/
 function firstRecurring1(arr) {
   for (i = 0; i < arr.length; i++) {
     for (j = i + 1; j < arr.length; j++)
@@ -15,7 +16,8 @@ function firstRecurring1(arr) {
 
 console.log(firstRecurring1([2, 5, 1, 2, 3, 5, 1, 2, 4]));
 
-//Both time and space complexity is O(n) with set()
+/* Both time and space complexity is O(n) with set()
+This approach return the number that repeats first in time order. */
 function firstRecurring2(arr) {
   const seen = new Set();
   //Go through each value in arr, one by one.
