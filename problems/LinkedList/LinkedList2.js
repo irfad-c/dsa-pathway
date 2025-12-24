@@ -33,16 +33,10 @@ class LinkedList {
   }
 }
 
-const myLinkedList = new LinkedList(10);
-myLinkedList.append(5);
-myLinkedList.append(16);
-myLinkedList.prepend(1);
+const myLinkedList = new LinkedList(1);
+myLinkedList.append(2);
+myLinkedList.append(3);
+myLinkedList.prepend(0);
 console.log(myLinkedList);
 
-/* head
- ↓
-1 → 10 → 5 → 16 → null
-                ↑
-               tail */
 
-/* append and prepend are different functions.So the local variable newNode exist only inside the function scope */
