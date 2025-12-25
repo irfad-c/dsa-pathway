@@ -61,12 +61,13 @@ class LinkedList {
       next: null,
     };
     const leader = this.traverseToIndex(index - 1);
-    const holdingPointer=leader.next
-    leader.next=newNode
-    newNode.next=holdingPointer
-    this.length
-    return this.printList()
+    const holdingPointer = leader.next;
+    leader.next = newNode;
+    newNode.next = holdingPointer;
+    this.length++;
+    return this.printList();
   }
+  //here index is less than our passed index by 1 (index=index-1)
   traverseToIndex(index) {
     let counter = 0;
     let currentNode = this.head;
@@ -74,7 +75,7 @@ class LinkedList {
       currentNode = currentNode.next;
       counter++;
     }
-    return currentNode
+    return currentNode;
   }
 }
 
@@ -82,6 +83,12 @@ const myLinkedList = new LinkedList(1);
 myLinkedList.append(5);
 myLinkedList.append(10);
 myLinkedList.prepend(0);
-myLinkedList.insert(2,3);
-myLinkedList.insert(30,30);
+myLinkedList.insert(2, 3);
+myLinkedList.insert(30, 30);
 console.log(myLinkedList.printList());
+
+/*
+Why is traverseToIndex written AFTER insert?
+
+Order does NOT matter inside a class.
+*/
