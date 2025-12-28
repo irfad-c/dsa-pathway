@@ -2,6 +2,8 @@
 Implemented printed list function
 Implemented LinkedIn insertion
 Insert is O(n) 
+Implemented LinkedIn removal
+Removing is O(n)
 */
 
 class LinkedList {
@@ -77,6 +79,13 @@ class LinkedList {
     }
     return currentNode;
   }
+  remove(index) {
+    const leader = this.traverseToIndex(index - 1);
+    const unwantedNode = leader.next;
+    leader.next = unwantedNode.next;
+    this.length--;
+    return this.printList();
+  }
 }
 
 const myLinkedList = new LinkedList(1);
@@ -85,6 +94,7 @@ myLinkedList.append(10);
 myLinkedList.prepend(0);
 myLinkedList.insert(2, 3);
 myLinkedList.insert(30, 30);
+myLinkedList.remove(3);
 console.log(myLinkedList.printList());
 
 /*
