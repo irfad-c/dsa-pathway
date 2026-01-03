@@ -67,7 +67,6 @@ class DoublyLinkedList {
       this.length--;
       return;
     }
-
     if (index >= this.length - 1) {
       // remove tail
       const newTail = this.tail.prev;
@@ -76,15 +75,30 @@ class DoublyLinkedList {
       this.length--;
       return;
     }
-
     const leader = this.traverseToIndex(index - 1);
     const nodeToRemove = leader.next;
     const follower = nodeToRemove.next;
-
     leader.next = follower;
     follower.prev = leader;
-
     this.length--;
+  }
+  printList() {
+    let arr = [];
+    let currentNode = this.head;
+    while (currentNode !== null) {
+      arr.push(currentNode.value);
+      currentNode = currentNode.next;
+    }
+    return arr;
+  }
+   reversePrintList() {
+    let arr = [];
+    let currentNode = this.tail;
+    while (currentNode !== null) {
+      arr.push(currentNode.value);
+      currentNode = currentNode.prev;
+    }
+    return arr
   }
 }
 
@@ -93,7 +107,9 @@ newDoublyLinkedList.append(20);
 newDoublyLinkedList.prepend(1);
 newDoublyLinkedList.insert(2, 2);
 newDoublyLinkedList.remove(3);
-console.log(newDoublyLinkedList);
+console.log("Linked List :", newDoublyLinkedList);
+console.log("As array :", newDoublyLinkedList.printList());
+console.log("As reversed array :", newDoublyLinkedList.reversePrintList());
 
 /*
 Short answer first
