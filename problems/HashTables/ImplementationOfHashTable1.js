@@ -1,3 +1,5 @@
+//Implementation of Hash table with out collision handling.
+
 class HashTable {
   constructor(size) {
     this.data = new Array(size);

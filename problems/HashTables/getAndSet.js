@@ -3,11 +3,11 @@ const object1 = {
 
   get nameSetter() {
     return this.name;
-    console.log(this.name);
   },
+
   set nameSetter(value) {
     if (value === "Saleem") {
-      console.log("This name is not allowed");
+      console.log("Saleem is not allowed");
       return;
     } else {
       this.name = value;
@@ -21,10 +21,24 @@ console.log(object1.nameSetter);
 object1.nameSetter = "Saleem";
 //This triggers set
 
-console.log(object1.nameSetter);
+object1.nameSetter = "Ruksana";
+//This triggers set
 
+console.log(object1.nameSetter);
 /*
-🌟 Summary in One Line
+
 get lets you read a property with custom logic.
 set lets you update a property with custom logic
+
+Reading a property → get runs
+Assigning a value → set runs
+
+nameSetter is defined as a getter, not a function.
+getters are accessed like properties, not called.
+
+Simple rule to remember
+Action	Syntax
+Get value	obj.prop
+Set value	obj.prop = value
+❌ Never	obj.prop()
 */
