@@ -29,7 +29,7 @@ class Animal {
       for (let index = 0; index < bucket.length; index++) {
         if (bucket[index][0] === key) {
           console.log(
-            "This value is returned in get method.",
+            "This is the value which is returned by using get method.",
             bucket[index][1],
           );
 
@@ -44,7 +44,7 @@ class Animal {
     let keysArray = [];
     for (let i = 0; i < this.data.length; i++) {
       let bucket = this.data[i];
-     // console.log("This is bucket inside getKeys function.", bucket);
+      // console.log("This is bucket inside getKeys function.", bucket);
 
       //handling collision (if same index contains 2 arrays)
       if (bucket) {
